@@ -1,0 +1,18 @@
+﻿{
+  "dependencies": [
+    {
+      "fileName": "krnln",
+      "guid": "d09f2340818511d396f6aaf844c7e325",
+      "kind": "elib",
+      "localWorkspace": "elib/系统核心支持库.txt",
+      "name": "系统核心支持库",
+      "path": "",
+      "reExport": false,
+      "resolvedPath": "C:\\Users\\aiqin\\OneDrive\\e5.6\\lib\\krnln.fne",
+      "versionText": "5.7"
+    }
+  ],
+  "projectName": "Aurora.Console",
+  "sourcePath": "D:\\git\\e-packager\\eproj\\Aurora.Console.e",
+  "versionText": "1.0"
+}

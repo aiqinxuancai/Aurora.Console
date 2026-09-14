@@ -1,0 +1,476 @@
+﻿{
+  "constants": [
+    {
+      "id": 402718753,
+      "key": "",
+      "name": "常量1",
+      "pageType": 1,
+      "textDigest": "6142CD276FE34EAB"
+    },
+    {
+      "id": 402718754,
+      "key": "",
+      "name": "控制台_标准输出",
+      "pageType": 1,
+      "textDigest": "F192C9522D5BF4F3"
+    },
+    {
+      "id": 402718755,
+      "key": "",
+      "name": "控制台_标准输入",
+      "pageType": 1,
+      "textDigest": "F590717ACD03DA08"
+    },
+    {
+      "id": 402718756,
+      "key": "",
+      "name": "控制台_标准错误",
+      "pageType": 1,
+      "textDigest": "19D8F7BAD701B9BE"
+    },
+    {
+      "id": 402718757,
+      "key": "",
+      "name": "控制台_黑",
+      "pageType": 1,
+      "textDigest": "51129E9487BC8BF2"
+    },
+    {
+      "id": 402718758,
+      "key": "",
+      "name": "控制台_深蓝",
+      "pageType": 1,
+      "textDigest": "23450F1D41EFB4B1"
+    },
+    {
+      "id": 402718759,
+      "key": "",
+      "name": "控制台_深绿",
+      "pageType": 1,
+      "textDigest": "4F1EF0E6D2166C42"
+    },
+    {
+      "id": 402718760,
+      "key": "",
+      "name": "控制台_深青",
+      "pageType": 1,
+      "textDigest": "EABA3F0C0D08B7ED"
+    },
+    {
+      "id": 402718761,
+      "key": "",
+      "name": "控制台_深红",
+      "pageType": 1,
+      "textDigest": "DF7883709ABCEA40"
+    },
+    {
+      "id": 402718762,
+      "key": "",
+      "name": "控制台_深紫",
+      "pageType": 1,
+      "textDigest": "97FF80B78BF26789"
+    },
+    {
+      "id": 402718763,
+      "key": "",
+      "name": "控制台_深黄",
+      "pageType": 1,
+      "textDigest": "653C1638FCB27868"
+    },
+    {
+      "id": 402718764,
+      "key": "",
+      "name": "控制台_灰",
+      "pageType": 1,
+      "textDigest": "9D6551C2DC61A533"
+    },
+    {
+      "id": 402718765,
+      "key": "",
+      "name": "控制台_深灰",
+      "pageType": 1,
+      "textDigest": "2FBE052D0BA23F32"
+    },
+    {
+      "id": 402718766,
+      "key": "",
+      "name": "控制台_亮蓝",
+      "pageType": 1,
+      "textDigest": "B4814AF872E772EF"
+    },
+    {
+      "id": 402718767,
+      "key": "",
+      "name": "控制台_亮绿",
+      "pageType": 1,
+      "textDigest": "39415F86B501EBF6"
+    },
+    {
+      "id": 402718768,
+      "key": "",
+      "name": "控制台_亮青",
+      "pageType": 1,
+      "textDigest": "C83C3B5FF1CEF6C3"
+    },
+    {
+      "id": 402718769,
+      "key": "",
+      "name": "控制台_亮红",
+      "pageType": 1,
+      "textDigest": "4333A6A47099071C"
+    },
+    {
+      "id": 402718770,
+      "key": "",
+      "name": "控制台_亮紫",
+      "pageType": 1,
+      "textDigest": "3F1FF99750EFAE19"
+    },
+    {
+      "id": 402718771,
+      "key": "",
+      "name": "控制台_亮黄",
+      "pageType": 1,
+      "textDigest": "3BDC3B0D9880F802"
+    },
+    {
+      "id": 402718772,
+      "key": "",
+      "name": "控制台_白",
+      "pageType": 1,
+      "textDigest": "CF6F1C601BEE251F"
+    },
+    {
+      "id": 402718773,
+      "key": "",
+      "name": "控制台_背景位移",
+      "pageType": 1,
+      "textDigest": "4C60399BA6DF2183"
+    },
+    {
+      "id": 402718774,
+      "key": "",
+      "name": "控制台_高亮",
+      "pageType": 1,
+      "textDigest": "832A37709D754C51"
+    }
+  ],
+  "dlls": [
+    {
+      "id": 167843673,
+      "memoryAddress": 43560176,
+      "name": "GetStdHandle",
+      "paramIds": [
+        1157699430
+      ],
+      "paramTypes": [
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "92C3EFBA62C8C4CE"
+    },
+    {
+      "id": 167843674,
+      "memoryAddress": 43560096,
+      "name": "SetConsoleTextAttribute",
+      "paramIds": [
+        1157699431,
+        1157699432
+      ],
+      "paramTypes": [
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "1BA935649E291670"
+    },
+    {
+      "id": 167843675,
+      "memoryAddress": 43560016,
+      "name": "WriteConsoleA",
+      "paramIds": [
+        1157699433,
+        1157699434,
+        1157699435,
+        1157699436,
+        1157699437
+      ],
+      "paramTypes": [
+        -2147482879,
+        -2147483644,
+        -2147482879,
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "DB726ED824733600"
+    },
+    {
+      "id": 167843676,
+      "memoryAddress": 43559936,
+      "name": "SetConsoleCursorPosition",
+      "paramIds": [
+        1157699438,
+        1157699439
+      ],
+      "paramTypes": [
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "442F1FA4C473B0D3"
+    },
+    {
+      "id": 167843677,
+      "memoryAddress": 43559856,
+      "name": "GetConsoleScreenBufferInfo",
+      "paramIds": [
+        1157699440,
+        1157699441
+      ],
+      "paramTypes": [
+        -2147482879,
+        1090585696
+      ],
+      "returnType": -2147482879,
+      "textDigest": "BE746FAE2B82CA51"
+    },
+    {
+      "id": 167843678,
+      "memoryAddress": 43559776,
+      "name": "ReadConsoleA",
+      "paramIds": [
+        1157699442,
+        1157699443,
+        1157699444,
+        1157699445,
+        1157699446
+      ],
+      "paramTypes": [
+        -2147482879,
+        -2147483644,
+        -2147482879,
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "8ECB931A7AF7CF6C"
+    },
+    {
+      "id": 167843679,
+      "memoryAddress": 43559696,
+      "name": "ReadConsoleInputA",
+      "paramIds": [
+        1157699447,
+        1157699448,
+        1157699449,
+        1157699450
+      ],
+      "paramTypes": [
+        -2147482879,
+        1090585697,
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "5B14D093337D4E43"
+    },
+    {
+      "id": 167843680,
+      "memoryAddress": 43559616,
+      "name": "FlushConsoleInputBuffer",
+      "paramIds": [
+        1157699451
+      ],
+      "paramTypes": [
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "0FBDEE0B371FED30"
+    },
+    {
+      "id": 167843681,
+      "memoryAddress": 43559536,
+      "name": "GetConsoleMode",
+      "paramIds": [
+        1157699452,
+        1157699453
+      ],
+      "paramTypes": [
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "40452826330426C3"
+    },
+    {
+      "id": 167843682,
+      "memoryAddress": 43559456,
+      "name": "SetConsoleMode",
+      "paramIds": [
+        1157699454,
+        1157699455
+      ],
+      "paramTypes": [
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "2EFDEE5AB71934FF"
+    },
+    {
+      "id": 167843683,
+      "memoryAddress": 43559376,
+      "name": "GetConsoleWindow",
+      "paramIds": [],
+      "paramTypes": [],
+      "returnType": -2147482879,
+      "textDigest": "04E45F33B3FD9858"
+    },
+    {
+      "id": 167843684,
+      "memoryAddress": 43559296,
+      "name": "IsWindowVisible",
+      "paramIds": [
+        1157699456
+      ],
+      "paramTypes": [
+        -2147482879
+      ],
+      "returnType": -2147483646,
+      "textDigest": "B53283B74835C085"
+    },
+    {
+      "id": 167843685,
+      "memoryAddress": 43559216,
+      "name": "ReadConsoleOutputCharacterA",
+      "paramIds": [
+        1157699457,
+        1157699458,
+        1157699459,
+        1157699460,
+        1157699461
+      ],
+      "paramTypes": [
+        -2147482879,
+        -2147483644,
+        -2147482879,
+        -2147482879,
+        -2147482879
+      ],
+      "returnType": -2147482879,
+      "textDigest": "4A007B2B191CF58F"
+    }
+  ],
+  "globals": [
+    {
+      "dataType": -2147483646,
+      "id": 83958524,
+      "name": "g_VT支持",
+      "textDigest": "75557BB6E3CE04E7"
+    },
+    {
+      "dataType": -2147482879,
+      "id": 83958525,
+      "name": "g_动效模式",
+      "textDigest": "AB1380787C466FF0"
+    }
+  ],
+  "programHeader": {
+    "debugCommandLine": "",
+    "flag1": 0,
+    "flag2": 0,
+    "icon": "",
+    "supportLibraryInfo": [
+      "krnln\rd09f2340818511d396f6aaf844c7e325\r5\r7\r系统核心支持库"
+    ],
+    "unk1": 51113791,
+    "unk2_1": "gAIAAA==",
+    "unk2_2": "AAA=",
+    "unk2_3": "BAA=",
+    "unk3Op": "",
+    "versionFlag1": 78140
+  },
+  "structs": [
+    {
+      "id": 1090585694,
+      "memberIds": [
+        889259106,
+        889259107
+      ],
+      "memberTypes": [
+        -2147483135,
+        -2147483135
+      ],
+      "memoryAddress": 43560448,
+      "name": "控制台坐标",
+      "textDigest": "98E978B6DF93881B"
+    },
+    {
+      "id": 1090585695,
+      "memberIds": [
+        889259108,
+        889259109,
+        889259110,
+        889259111
+      ],
+      "memberTypes": [
+        -2147483135,
+        -2147483135,
+        -2147483135,
+        -2147483135
+      ],
+      "memoryAddress": 43560384,
+      "name": "控制台矩形",
+      "textDigest": "B78322369599907D"
+    },
+    {
+      "id": 1090585696,
+      "memberIds": [
+        889259112,
+        889259113,
+        889259114,
+        889259115,
+        889259116
+      ],
+      "memberTypes": [
+        1090585694,
+        1090585694,
+        -2147483135,
+        1090585695,
+        1090585694
+      ],
+      "memoryAddress": 43560320,
+      "name": "控制台屏幕缓冲区信息",
+      "textDigest": "3FDCC0C155ECB2E1"
+    },
+    {
+      "id": 1090585697,
+      "memberIds": [
+        889259117,
+        889259118,
+        889259119,
+        889259120,
+        889259121,
+        889259122,
+        889259123,
+        889259124,
+        889259125
+      ],
+      "memberTypes": [
+        -2147483135,
+        -2147483135,
+        -2147482879,
+        -2147483135,
+        -2147483135,
+        -2147483135,
+        -2147483391,
+        -2147483391,
+        -2147482879
+      ],
+      "memoryAddress": 43560256,
+      "name": "输入记录",
+      "textDigest": "D9DEB16C0F58EB20"
+    }
+  ]
+}

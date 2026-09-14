@@ -1,0 +1,59 @@
+﻿.版本 2
+
+.DLL命令 GetStdHandle, 整数型, "kernel32.dll", "GetStdHandle", 公开, 取标准设备句柄
+    .参数 nStdHandle, 整数型, , 设备标识：-11=标准输出，-10=标准输入，-12=标准错误
+
+.DLL命令 SetConsoleTextAttribute, 整数型, "kernel32.dll", "SetConsoleTextAttribute", 公开, 设置控制台文本颜色属性
+    .参数 hConsoleOutput, 整数型, , 标准输出设备句柄
+    .参数 wAttributes, 整数型, , 前景色与背景色组合值
+
+.DLL命令 WriteConsoleA, 整数型, "kernel32.dll", "WriteConsoleA", 公开, 直接向控制台写出 ANSI 文本
+    .参数 hConsoleOutput, 整数型, , 标准输出设备句柄
+    .参数 lpBuffer, 文本型, , 欲写出的文本内容
+    .参数 nNumberOfCharsToWrite, 整数型, , 欲写出的字符数
+    .参数 lpNumberOfCharsWritten, 整数型, 传址, 接收实际写出字符数，可传 0
+    .参数 lpReserved, 整数型, , 保留参数，必须为 0
+
+.DLL命令 SetConsoleCursorPosition, 整数型, "kernel32.dll", "SetConsoleCursorPosition", 公开, 移动控制台光标位置
+    .参数 hConsoleOutput, 整数型, , 标准输出设备句柄
+    .参数 dwCursorPosition, 整数型, , COORD 结构按 4 字节内联传递：横坐标 ＋ 纵坐标 × 65536
+
+.DLL命令 GetConsoleScreenBufferInfo, 整数型, "kernel32.dll", "GetConsoleScreenBufferInfo", 公开, 取控制台屏幕缓冲区信息
+    .参数 hConsoleOutput, 整数型, , 标准输出设备句柄
+    .参数 lpConsoleScreenBufferInfo, 控制台屏幕缓冲区信息, 传址, 接收缓冲区尺寸、光标位置与窗口区域
+
+.DLL命令 ReadConsoleA, 整数型, "kernel32.dll", "ReadConsoleA", 公开, 从标准输入读取文本
+    .参数 hConsoleInput, 整数型, , 标准输入设备句柄
+    .参数 lpBuffer, 文本型, , 接收缓冲区（需预先分配空白）
+    .参数 nNumberOfCharsToRead, 整数型, , 最多读取的字符数
+    .参数 lpNumberOfCharsRead, 整数型, 传址, 接收实际读取字符数
+    .参数 lpReserved, 整数型, , 保留参数，必须为 0
+
+.DLL命令 ReadConsoleInputA, 整数型, "kernel32.dll", "ReadConsoleInputA", 公开, 读取控制台输入事件
+    .参数 hConsoleInput, 整数型, , 标准输入设备句柄
+    .参数 lpBuffer, 输入记录, 传址, 接收键盘等事件记录
+    .参数 nLength, 整数型, , 欲读取的事件记录数
+    .参数 lpNumberOfEventsRead, 整数型, 传址, 接收实际读取的记录数
+
+.DLL命令 FlushConsoleInputBuffer, 整数型, "kernel32.dll", "FlushConsoleInputBuffer", 公开, 清空控制台输入缓冲区
+    .参数 hConsoleInput, 整数型, , 标准输入设备句柄
+
+.DLL命令 GetConsoleMode, 整数型, "kernel32.dll", "GetConsoleMode", 公开, 取控制台模式
+    .参数 hConsoleHandle, 整数型, , 控制台句柄
+    .参数 lpMode, 整数型, 传址, 接收当前模式值
+
+.DLL命令 SetConsoleMode, 整数型, "kernel32.dll", "SetConsoleMode", 公开, 设置控制台模式
+    .参数 hConsoleHandle, 整数型, , 控制台句柄
+    .参数 dwMode, 整数型, , 新模式值
+
+.DLL命令 GetConsoleWindow, 整数型, "kernel32.dll", "GetConsoleWindow", 公开, 取当前控制台窗口句柄（隐藏运行或伪终端下可能为 0 或不可见窗口）
+
+.DLL命令 IsWindowVisible, 逻辑型, "user32.dll", "IsWindowVisible", 公开, 判断指定窗口是否可见
+    .参数 hWnd, 整数型, , 窗口句柄
+
+.DLL命令 ReadConsoleOutputCharacterA, 整数型, "kernel32.dll", "ReadConsoleOutputCharacterA", 公开, 读取控制台屏幕缓冲区指定位置的字符
+    .参数 hConsoleOutput, 整数型, , 标准输出设备句柄
+    .参数 lpCharacter, 文本型, , 接收字符的文本缓冲区（需预先分配空白）
+    .参数 nLength, 整数型, , 欲读取的字符数
+    .参数 dwReadCoord, 整数型, , COORD 结构按 4 字节内联传递：横坐标 ＋ 纵坐标 × 65536
+    .参数 lpNumberOfCharsRead, 整数型, 传址, 接收实际读取字符数
