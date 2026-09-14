@@ -3,7 +3,7 @@
 ## 项目说明
 
 当前目录是由 `Aurora.Console.e` 解包得到的易语言目录工程。
-外部编辑器应直接修改本目录内容，再通过 `tool\\e-packager.exe` 回包生成 `Aurora.Console.e` 文件。
+外部编辑器应直接修改本目录内容，再通过 `tool\e-packager.exe` 回包生成 `Aurora.Console.e` 文件。
 
 ## 目录结构
 
@@ -101,9 +101,9 @@ bin1 ＝ {  }  ' ok
 - `image/list.json` 和 `audio/list.json` 是资源索引，实际资源文件通常位于同目录下的 `.bin` 文件中；封包时按索引读取，不要只新增文件而不更新 `list.json`。
 - 资源的使用方法和常量一致，在易语言代码中以 `#资源名` 引用；`list.json` 中的 `logicalName` 就是 `#` 后面的资源名。
 - `image/` 与 `audio/` 只是资源类型分组，除图片和音频外，也可以存放程序需要携带的任意二进制数据。
-- 新增图片资源：`tool\\e-packager.exe update . --add-image 图片文件路径`，默认使用文件名 stem 作为资源名，例如 `logo.png` 对应 `#logo`。
-- 新增音频资源：`tool\\e-packager.exe update . --add-audio 音频文件路径`，默认使用文件名 stem 作为资源名。
-- 显式指定资源名：`tool\\e-packager.exe update . --add-image 资源名=文件路径` 或 `tool\\e-packager.exe update . --add-audio 资源名=文件路径`；资源名不要包含路径分隔符或 Windows 文件名非法字符。
+- 新增图片资源：`tool\e-packager.exe update . --add-image 图片文件路径`，默认使用文件名 stem 作为资源名，例如 `logo.png` 对应 `#logo`。
+- 新增音频资源：`tool\e-packager.exe update . --add-audio 音频文件路径`，默认使用文件名 stem 作为资源名。
+- 显式指定资源名：`tool\e-packager.exe update . --add-image 资源名=文件路径` 或 `tool\e-packager.exe update . --add-audio 资源名=文件路径`；资源名不要包含路径分隔符或 Windows 文件名非法字符。
 
 ## 新增程序集 / 类 / 窗口操作
 
@@ -146,7 +146,7 @@ bin1 ＝ {  }  ' ok
 
 - 封包器会优先按这些规则匹配窗口和窗口程序集：同名、`窗口程序集_<窗口名>`，以及少量兼容写法。为了减少名称链接错误，新增窗口时优先使用 `窗口程序集_<窗口名>.txt` 这种命名。
 - 新增源码页后，不需要手动编辑窗口列表页或其它目录索引；`pack` 时会自动扫描 `src/**/*.txt`（排除 `src/.数据类型.txt`、`src/.DLL声明.txt`、`src/.常量.txt`、`src/.全局变量.txt` 这些固定文件）以及 `src/**/*.xml`。
-- 新增完成后，立即运行 `tool\\e-packager.exe` 或 `tool\\e-packager.exe pack . .\\pack\\Aurora.Console.e` 做一次封包验证，尽早发现语法错误、窗口绑定错误或名称链接错误。
+- 新增完成后，立即运行 `tool\e-packager.exe` 或 `tool\e-packager.exe pack . .\pack\Aurora.Console.e` 做一次封包验证，尽早发现语法错误、窗口绑定错误或名称链接错误。
 
 ## 类的限制与注意事项
 
@@ -157,7 +157,7 @@ bin1 ＝ {  }  ' ok
 
 ## 回包前预检
 
-- 修改源码后先运行 `tool\\e-packager.exe validate .`。`pack` 和无参默认回包也会自动执行同一套预检，存在确定性错误时不会写出目标文件。
+- 修改源码后先运行 `tool\e-packager.exe validate .`。`pack` 和无参默认回包也会自动执行同一套预检，存在确定性错误时不会写出目标文件。
 - 预检会阻止声明槽位或属性错位、非法数组维数、自定义类型数组成员零维、声明顺序错误、重复名称、未知点指令、流程结束标记不匹配、智能引号或括号未闭合、`a ＝` 缺少值、半角 `a = value`、只读目标赋值、窗体 XML 或窗口程序集绑定错误、控件成员或事件处理器缺失，以及可静态确定的符号、成员、调用签名、返回值和表达式类型错误。
 - 只有行尾未使用的声明槽位可以省略；为了填写后面的属性、数组维数或说明而保留的中间空槽仍必须写逗号。`validate` 不会要求声明补齐全部尾槽。
 - 预检采用保守语义：类继承和访问权限、类实例方法调用边界、支持库或易模块重载及特殊命令、变体型及泛型类型流、窗口事件参数签名、全部隐式转换和特殊表达式尚未完整覆盖；依赖元数据缺失或语义无法确定时不会臆测报错。DLL 入口和运行期错误也不在检查范围内。因此 `errors=0` 只表示没有发现当前覆盖范围内的确定性错误，不等于 IDE 编译成功。
@@ -240,11 +240,11 @@ tool\e-packager.exe pack . .\pack\checked.e `
 
 在项目根目录执行以下任一方式：
 
-- 默认方式：`tool\\e-packager.exe`
+- 默认方式：`tool\e-packager.exe`
   默认输出到 `pack/` 目录，文件名优先使用 `info.json` 中记录的默认封包文件名。
-- 只做快速预检：`tool\\e-packager.exe validate .`
-- 显式方式：`tool\\e-packager.exe pack . .\\pack\\Aurora.Console.e`
-- 设置打开密码：`tool\\e-packager.exe pack . .\\pack\\Aurora.Console.e --password 密码文本`
+- 只做快速预检：`tool\e-packager.exe validate .`
+- 显式方式：`tool\e-packager.exe pack . .\pack\Aurora.Console.e`
+- 设置打开密码：`tool\e-packager.exe pack . .\pack\Aurora.Console.e --password 密码文本`
 
 回包后的 `Aurora.Console.e` 可直接在易语言 IDE 中打开；能否成功编译仍以 IDE 或 AutoLinker 的实际编译结果为准。
 
@@ -252,13 +252,13 @@ tool\e-packager.exe pack . .\pack\checked.e `
 
 当你新增模块、支持库、图片、音频或其它二进制资源，或希望刷新当前目录下的派生依赖文件时，可在项目根目录执行：
 
-- 刷新当前 `project/.module.json`、`ecom/` 以及可用时的 `elib/`：`tool\\e-packager.exe update .`
-- 新增模块后顺带写入依赖并刷新：`tool\\e-packager.exe update . --add-ecom 某模块.ec`
-- 新增支持库后顺带写入依赖并刷新：`tool\\e-packager.exe update . --add-elib 某支持库.fne`
-- `--add-elib` 也可直接填写支持库名称，例如：`tool\\e-packager.exe update . --add-elib spec`
-- 新增图片资源并写入 `image/list.json`：`tool\\e-packager.exe update . --add-image logo.png`
-- 新增音频资源并写入 `audio/list.json`：`tool\\e-packager.exe update . --add-audio notify.wav`
-- 自定义资源常量名：`tool\\e-packager.exe update . --add-image 启动画面=splash.bin`，代码中用 `#启动画面` 引用。
+- 刷新当前 `project/.module.json`、`ecom/` 以及可用时的 `elib/`：`tool\e-packager.exe update .`
+- 新增模块后顺带写入依赖并刷新：`tool\e-packager.exe update . --add-ecom 某模块.ec`
+- 新增支持库后顺带写入依赖并刷新：`tool\e-packager.exe update . --add-elib 某支持库.fne`
+- `--add-elib` 也可直接填写支持库名称，例如：`tool\e-packager.exe update . --add-elib spec`
+- 新增图片资源并写入 `image/list.json`：`tool\e-packager.exe update . --add-image logo.png`
+- 新增音频资源并写入 `audio/list.json`：`tool\e-packager.exe update . --add-audio notify.wav`
+- 自定义资源常量名：`tool\e-packager.exe update . --add-image 启动画面=splash.bin`，代码中用 `#启动画面` 引用。
 
 `update` 不会直接回包；它用于在继续编辑源码前，同步项目中模块 / 支持库的依赖描述、导出的辅助资料以及资源索引。
 
